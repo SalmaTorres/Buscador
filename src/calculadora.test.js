@@ -19,4 +19,7 @@ describe("Calculadora", () => {
     it("Deberia devolver la suma de varios numeros que estan en una cadena separados por ',' o '-'", () => {
         expect(SumarCadena("1,2-3")).toEqual(6);
     });
+    it("Deberia devolver la suma de los numeros que no sean mayores a 1000'", () => {
+        expect(SumarCadena("1,2-10001-3")).toEqual(6);
+    });
 });

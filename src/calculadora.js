@@ -7,8 +7,12 @@ function SumarCadena(cadenaDeNumeros){
     {
         let conjuntoDeNumeros = cadenaDeNumeros.split(/[,-]/).map(Number);
         let suma = 0;
-        for (let posicionNumero = 0; posicionNumero < conjuntoDeNumeros.length; posicionNumero++) {
-            suma = suma + conjuntoDeNumeros[posicionNumero];
+        for (let posicionNumero = 0; posicionNumero < conjuntoDeNumeros.length; posicionNumero++) 
+        {
+            if(conjuntoDeNumeros[posicionNumero] <= 1000)
+            {
+                suma = suma + conjuntoDeNumeros[posicionNumero];
+            }
         }
         return suma;
     }
