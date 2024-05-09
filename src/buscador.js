@@ -2,8 +2,10 @@ function BuscarProyecto(nombreProyecto, proyectos){
     if(proyectos.length === 0){
         return "";
     }
-    if(proyectos[0] === nombreProyecto){
-        return nombreProyecto;
+    for(const proyecto of proyectos){
+        if(proyecto === nombreProyecto){
+            return proyecto
+        }
     }
 }
 
