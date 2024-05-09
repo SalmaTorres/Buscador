@@ -33,4 +33,12 @@ describe("Buscar", () => {
         proyectos.push("proyecto4");
         expect(BuscarProyecto("ejerc", proyectos)).toEqual(["ejercicio1","ejercicio2"]);
     });
+    it("Buscar y no encontrar proyecto en una lista de proyectos", () => {
+        let proyectos = [];
+        proyectos.push("proyecto1");
+        proyectos.push("proyecto2");
+        proyectos.push("proyecto3");
+        proyectos.push("proyecto4");
+        expect(BuscarProyecto("ejercicio1", proyectos)).toEqual("");
+      });
 });
