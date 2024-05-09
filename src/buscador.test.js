@@ -17,4 +17,12 @@ describe("Buscar", () => {
         proyectos.push("proyecto3");
         expect(BuscarProyecto("proyecto2", proyectos)).toEqual("proyecto2");
       });
+    it("Buscar y encontrar mas de una coindencia de proyectos", () => {
+        let proyectos = [];
+        proyectos.push("proyecto1");
+        proyectos.push("proyecto2");
+        proyectos.push("proyecto3");
+        proyectos.push("proyecto2");
+        expect(BuscarProyecto("proyecto2", proyectos)).toEqual(["proyecto2","proyecto2"]);
+    });
 });
