@@ -16,4 +16,7 @@ describe("Calculadora", () => {
     it("Deberia devolver la suma de varios numeros que estan en una cadena", () => {
         expect(SumarCadena("1,10,100")).toEqual(111);
     });
+    it("Deberia devolver la suma de varios numeros que estan en una cadena separados por ',' o '-'", () => {
+        expect(SumarCadena("1,2-3")).toEqual(6);
+    });
 });

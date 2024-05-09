@@ -5,7 +5,7 @@ function SumarCadena(cadenaDeNumeros){
     }
     if(cadenaDeNumeros.length > 1)
     {
-        let conjuntoDeNumeros = cadenaDeNumeros.split(",").map(Number);
+        let conjuntoDeNumeros = cadenaDeNumeros.split(/[,-]/).map(Number);
         let suma = 0;
         for (let posicionNumero = 0; posicionNumero < conjuntoDeNumeros.length; posicionNumero++) {
             suma = suma + conjuntoDeNumeros[posicionNumero];
