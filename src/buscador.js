@@ -1,22 +1,19 @@
-function BuscarProyecto(nombreProyecto, proyectos){
-    let proyectosEncontrados = [];
-    let cantidad = 0;
-    if(proyectos.length === 0){
-        return "";
-    }
-    for(const proyecto of proyectos){
-        if(proyecto.startsWith(nombreProyecto)){
-            proyectosEncontrados.push(proyecto);
-            cantidad += 1;    
+function BuscarProyecto(NombreProyectoBuscado, ListaProyectos){
+    let ProyectosEncontrados = [];
+    let CantidadProyectosEncontrados = 0;
+    for(const ProyectoAComparar of ListaProyectos){
+        if(ProyectoAComparar.startsWith(NombreProyectoBuscado)){
+            ProyectosEncontrados.push(ProyectoAComparar);
+            CantidadProyectosEncontrados += 1;    
         }
     }
-    if(cantidad > 1){
-        return proyectosEncontrados;
+    if (CantidadProyectosEncontrados === 0) {
+        return "";
     }
-    if(cantidad === 1){
-        return proyectosEncontrados[0];
+    if (CantidadProyectosEncontrados === 1) {
+        return ProyectosEncontrados[0];
     }
-    return "";
+    return ProyectosEncontrados;
 }
 
 export default BuscarProyecto;
