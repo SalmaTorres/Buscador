@@ -5,7 +5,7 @@ function BuscarProyecto(nombreProyecto, proyectos){
         return "";
     }
     for(const proyecto of proyectos){
-        if(proyecto === nombreProyecto){
+        if(proyecto.startsWith(nombreProyecto)){
             proyectosEncontrados.push(proyecto);
             cantidad += 1;    
         }
