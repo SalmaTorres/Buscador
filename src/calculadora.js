@@ -3,11 +3,14 @@ function SumarCadena(cadenaDeNumeros){
     {
         return parseInt(cadenaDeNumeros);
     }
-    if(cadenaDeNumeros.length === 3)
+    if(cadenaDeNumeros.length > 1)
     {
-        const numero1 = parseInt(cadenaDeNumeros[0]);
-        const numero2 = parseInt(cadenaDeNumeros[2]);
-        return numero1 + numero2;
+        let conjuntoDeNumeros = cadenaDeNumeros.split(",").map(Number);
+        let suma = 0;
+        for (let posicionNumero = 0; posicionNumero < conjuntoDeNumeros.length; posicionNumero++) {
+            suma = suma + conjuntoDeNumeros[posicionNumero];
+        }
+        return suma;
     }
     return 0;
 }
