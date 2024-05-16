@@ -9,7 +9,7 @@ function Sumar(conjuntoDeNumeros){
     return suma;
 }
 
-function SumarCadena(cadenaDeNumeros){
+function SumarNumerosEn(cadenaDeNumeros){
     if(cadenaDeNumeros.length === 1)
     {
         return parseInt(cadenaDeNumeros);
@@ -22,4 +22,4 @@ function SumarCadena(cadenaDeNumeros){
     return 0;
 }
 
-export default SumarCadena;
+export default SumarNumerosEn;
