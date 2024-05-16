@@ -1,23 +1,23 @@
-function Sumar(conjuntoDeNumeros){
+function Sumar(numeros){
     let suma = 0;
-    for (let posicionNumero = 0; posicionNumero < conjuntoDeNumeros.length; posicionNumero++) 
+    for (let indice = 0; indice < numeros.length; indice++) 
     {
-        if(conjuntoDeNumeros[posicionNumero] <= 1000){
-            suma = suma + conjuntoDeNumeros[posicionNumero];
+        if(numeros[indice] <= 1000){
+            suma = suma + numeros[indice];
         }
     }
     return suma;
 }
 
-function SumarNumerosEn(cadenaDeNumeros){
-    if(cadenaDeNumeros.length === 1)
+function SumarNumerosEn(cadena){
+    if(cadena.length === 1)
     {
-        return parseInt(cadenaDeNumeros);
+        return parseInt(cadena);
     }
-    if(cadenaDeNumeros.length > 1)
+    if(cadena.length > 1)
     {
-        let conjuntoDeNumeros = cadenaDeNumeros.split(/[,-]/).map(Number);
-        return Sumar(conjuntoDeNumeros);
+        let numeros = cadena.split(/[,-]/).map(Number);
+        return Sumar(numeros);
     }
     return 0;
 }
